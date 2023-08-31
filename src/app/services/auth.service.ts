@@ -33,4 +33,8 @@ export class AuthService {
     }
     return throwError(() => new Error('Неверный логин или пороль'))
   }
+
+  logout() {
+    this.router.navigate(['login'])
+  }
 }

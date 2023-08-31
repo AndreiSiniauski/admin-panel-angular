@@ -22,14 +22,14 @@
             >Личные контакты</a
             >
           </li>
-          <button type="button" class="btn btn-info ms-3">
+          <button type="button" class="btn btn-info ms-3" (click)="logout()">
             Выйти
           </button>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="progress">
+  <div class="progress" *ngIf="isLoading | async">
     <div 
         class="progress-bar progress-bar-striped progress-bar-animated"
         role="progressbar"
